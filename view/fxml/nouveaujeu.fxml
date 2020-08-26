@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="289.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerNewGame">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="164.0" prefWidth="575.0" VBox.vgrow="ALWAYS">
+      <children>
+            <AnchorPane layoutX="579.0" layoutY="4.0" prefHeight="200.0" prefWidth="171.0">
+               <children>
+                  <Label layoutX="68.0" layoutY="14.0" text="Thème" />
+                  <RadioButton fx:id="basique" layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleBasique" selected="true" text="Basique">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="theme" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="ocean" layoutX="53.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleOcean" text="Océan" toggleGroup="$theme" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="buttonValidate" layoutX="343.0" layoutY="204.0" mnemonicParsing="false" onAction="#handleButtonValidate" text="Valider" />
+            <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="164.0" prefWidth="194.0">
+               <children>
+              <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" lineSpacing="1.0" style="&#10;" text="Choisir le nombre de joueur" textAlignment="CENTER" wrapText="false">
+                <font>
+                  <Font size="12.0" />
+                </font>
+              </Label>
+                  <RadioButton fx:id="ia3" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleIa3" text="Trois joueurs et un ordinateur">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="nbIA" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="ia2" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleIa2" text="Deux Joueurs et deux ordinateurs" toggleGroup="$nbIA">
+                     <font>
+                        <Font size="10.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="ia1" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleIa1" text="Un joueur et trois ordinateurs" toggleGroup="$nbIA">
+                     <font>
+                        <Font size="11.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="ia4" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleIa4" selected="true" text="Quatre joueurs" toggleGroup="$nbIA" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="197.0" layoutY="3.0" prefHeight="164.0" prefWidth="181.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="22.0" layoutY="14.0" lineSpacing="1.0" style="&#10;" text="Difficulté des ordinateurs" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="facile" layoutX="38.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleFacile" selected="true" text="Facile">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="diffIA" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="moyen" layoutX="38.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleMoyen" text="Moyen" toggleGroup="$diffIA" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="378.0" layoutY="4.0" prefHeight="163.0" prefWidth="155.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" layoutX="60.0" layoutY="14.0" lineSpacing="1.0" style="&#10;" text="Type de jeu" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="normale" layoutX="4.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleNormale" selected="true" text="Partie normale">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="type" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="variante" layoutX="4.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleVariante" text="Variante trésor vivant" toggleGroup="$type" />
+                  <RadioButton fx:id="varianteMalus" layoutX="4.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleVarianteMalus" text="Trésor vivant avec pénalité" toggleGroup="$type" />
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

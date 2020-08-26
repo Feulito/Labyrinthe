@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"dedale","l":"application"},{"m":"dedale","l":"boardGame"},{"m":"dedale","l":"card"},{"m":"dedale","l":"factory"},{"m":"dedale","l":"game"},{"m":"dedale","l":"player"},{"m":"dedale","l":"treasure"}]
